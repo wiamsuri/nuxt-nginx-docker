@@ -7,9 +7,8 @@ services:
     restart: always
     ports:
       - "3000:3000"
-    command: >
-      bash -c "npm run build &&
-      npm run start"
+    command:
+      "npm run start"
 
   nginx:
     image: nginx:1.13
