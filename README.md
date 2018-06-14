@@ -1,1 +1,1 @@
-# nuxt-nginx-docker
+# Nuxt.js NGINX Docker
