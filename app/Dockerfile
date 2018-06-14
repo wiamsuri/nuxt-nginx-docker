@@ -1,10 +1,11 @@
-FROM node:latest
+FROM node:10.4
 
-RUN mkdir -p /usr/src/app/
-WORKDIR /usr/src/app/
+ENV APP_ROOT /src
 
-ONBUILD RUN npm install
+RUN mkdir ${APP_ROOT}
+WORKDIR ${APP_ROOT}
+ADD . ${APP_ROOT}
+
+RUN npm install
 
 ENV HOST 0.0.0.0
-
-# CMD [ "npm", "run", "buildStart"]

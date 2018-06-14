@@ -2,13 +2,14 @@ version: "3"
 
 services:
   nuxt:
-    build: .
+    build: ./app/
     container_name: nuxt
     restart: always
     ports:
       - "3000:3000"
-    command:
-      "npm run build && npm run start"
+    command: >
+      bash -c "npm run build &&
+      npm run start"
 
   nginx:
     image: nginx:1.13
@@ -18,4 +19,4 @@ services:
     volumes:
       - ./nginx:/etc/nginx/conf.d
     depends_on:
-      - app
+      - nuxt
