@@ -1,4 +1,4 @@
-FROM node:10.4
+FROM node:10.10
 
 ENV APP_ROOT /src
 
