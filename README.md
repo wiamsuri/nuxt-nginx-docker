@@ -1,7 +1,8 @@
 # Nuxt.js NGINX Docker
 
 ## Getting you instance ready for Docker
-With Ubuntu
+Run the following commands to install Docker and Docker Compose
+On Ubuntu
 ```
 sudo apt update
 sudo apt install -y docker.io git
@@ -22,6 +23,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 ## Build and run
+Download or clone this repository. Go into the root folder of this repository, and run the following command.
 ```
 docker-compose build && docker-compose up -d
 ```
