@@ -11,7 +11,7 @@ services:
       "npm run start"
 
   nginx:
-    image: nginx:1.15
+    image: nginx:1.17
     container_name: ngx
     ports:
       - "80:80"
