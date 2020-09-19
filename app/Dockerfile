@@ -1,10 +1,11 @@
-FROM node:10.20
+FROM node:14.11-buster-slim
+
+RUN apt-get update
 
 ENV APP_ROOT /src
 
-RUN mkdir ${APP_ROOT}
 WORKDIR ${APP_ROOT}
-ADD . ${APP_ROOT}
+COPY . ${APP_ROOT}
 
 RUN npm ci
 RUN npm run build

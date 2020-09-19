@@ -3,7 +3,6 @@ version: "3"
 services:
   nuxt:
     build: ./app/
-    container_name: nuxt
     restart: always
     ports:
       - "3000:3000"
@@ -11,8 +10,7 @@ services:
       "npm run start"
 
   nginx:
-    image: nginx:1.17
-    container_name: ngx
+    image: nginx:1.19
     ports:
       - "80:80"
     volumes:
